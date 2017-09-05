@@ -1,0 +1,96 @@
+/*
+flex container -> flex items
+- main axis: depends on the flex-direction property
+- main start | main end
+- main size
+- cross axis: depends on the main axis
+- cross-start | cross-end
+- cross size
+*/
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6 {
+	background: #2b9;
+	border-top: 1px solid #000;
+}
+.container1 {
+	display: flex;
+	flex-direction: row-reverse; /* align from left to right(ltr)*/
+	flex-wrap: nowrap; /*if set to nowrap, item will be all in one line, shrank if container space is not enough*/
+}
+
+.container2 {
+	display: flex;
+	flex-direction: row; /* align from right to left(ltr)*/
+	flex-wrap: wrap; /*if set to wrap, item will wrap onto multiple lines from top to bottom*/
+}
+
+.container3 {
+	display: flex;
+	flex-flow: row-reverse wrap-reverse; /*shorthand for flex-direction and flex-wrap*/
+}
+
+.container4 {
+	display: flex;
+	justify-content: center;
+	/* this works on ROWS
+	  flex-start: according to flex-direction
+      flex-end: according to flex-direction
+      center: center in main axis
+	  space-between: space between items are same
+	  space-around: space around items are same
+	  space-evenly: space between items or edges are same */
+}
+
+.container5 {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	/* this works ITEMS on every line scope
+	  flex-start: according to flex-direction
+      flex-end: according to flex-direction
+      center: center in cross axis
+	  baseline
+	  stretch */
+
+	height: 600px;
+}
+
+.container6 {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	/* this do not work when there is only one line, but works on mutiple LINES
+	  flex-start: according to flex-direction
+      flex-end: according to flex-direction
+      center: center in cross axis
+	  space-between
+	  space-around
+	  stretch */
+
+	height: 600px;
+}
+
+.container1 .item,
+.container2 .item,
+.container3 .item,
+.container4 .item,
+.container5 .item,
+.container6 .item {
+	background: lightcoral;
+	width: 200px;
+	height: 200px;
+	margin: 5px;
+}
+
+.container5 .item1,
+.container6 .item1 {
+	background: lightcoral;
+	width: 200px;
+	height: 250px;
+	margin: 5px;
+}
