@@ -7,12 +7,19 @@ flex container -> flex items
 - cross-start | cross-end
 - cross size
 */
+
+/*
+* note that float clear and vertical-align have no effect on a flex item
+*/
 .container1,
 .container2,
 .container3,
 .container4,
 .container5,
-.container6 {
+.container6,
+.container7,
+.container8,
+.container9 {
 	background: #2b9;
 	border-top: 1px solid #000;
 }
@@ -75,12 +82,29 @@ flex container -> flex items
 	height: 600px;
 }
 
+.container7,
+.container8 {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.container9 {
+	display: flex;
+	flex-wrap: nowrap;
+
+	height: 300px;
+}
+
 .container1 .item,
 .container2 .item,
 .container3 .item,
 .container4 .item,
 .container5 .item,
-.container6 .item {
+.container6 .item,
+.container7 .item,
+.container8 .item,
+.container9 .item {
 	background: lightcoral;
 	width: 200px;
 	height: 200px;
@@ -93,4 +117,37 @@ flex container -> flex items
 	width: 200px;
 	height: 250px;
 	margin: 5px;
+}
+.container7 .item1 {
+	/*
+    * order controls the ORDER in which items appear in the flex container
+	*/
+	order: -1;
+}
+
+.container8 .item1 {
+	/*
+    * except width, distribute the REMAINING space
+	*/
+	flex-grow: 2;
+}
+
+.container8 .item2 {
+	flex-grow: 1;
+}
+
+.container9 .item1 {
+	/*
+    * except width, distribute the SHRINKED space
+	*/
+	flex-shrink: 4;
+}
+.container9 .item2 {
+	flex-shrink: 2;
+
+	/*
+    * this will overwrite value of align-items
+	*/
+	align-self: flex-end;
+	float: right;
 }
