@@ -1,0 +1,62 @@
+.container {
+	position: relative;
+	margin: 5px auto;
+	width: 600px;
+	height: 300px;
+	background: #2b9;
+	text-align: center;
+}
+
+.container1 {
+	display: flex;
+	margin: 5px auto;
+	width: 600px;
+	height: 300px;
+	background: #2b9;
+	text-align: center;
+}
+
+.item {
+	height: 100px;
+	width: 200px;
+	background: lightcoral;
+}
+
+.item1 {
+	/*
+	* absolute top translate
+	* 绝对定位后子元素脱离了父元素盒子, 所以[margin: 0 auto]这种横向居中不再起作用, 要用left来设置
+	*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.item2 {
+	/*
+    * absolute top bottom margin
+	*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.item3 {
+	/*
+    * 仅仅对文字有效
+	*/
+	display: inline;
+	background: transparent;
+	line-height: 300px;
+}
+
+.item4 {
+	/*
+    * 
+	*/
+	margin: auto;
+}
