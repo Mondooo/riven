@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>position</title>
+	<style type="text/css">
+	    body {
+	    	position: relative;
+	    	border: 1px solid #000;
+	    }
+		div {
+			box-sizing: border-box;
+			width: 500px;
+			margin: 0px auto;
+			border: 1px dashed #333;
+			padding: 10px 12px;
+			background: rgba(0,0,0,.3);
+		}
+		.static {
+			/*position default to static*/
+			left: 100px; /*not work*/
+		}
+		.relative {
+			position: relative;
+			left: -100px;
+			top: 20px;
+			z-index: 10;
+		}
+		.relative:before {
+			content: "left: -100px; top: 20px";
+			display: block;
+			box-sizing: border-box;
+			padding: 2px;
+			height: 25px;
+			line-height: 25px;
+			position: absolute;
+			bottom: -25px;
+			left: 0;
+			background: lightgreen;
+		}
+		.absolute {
+			position: absolute;
+			/*with default top and left value*/
+			left: 0;
+			bottom: 0;
+		}
+		.absolute:before {
+			content: "bottom: 0; left: 0";
+			display: block;
+			box-sizing: border-box;
+			padding: 2px;
+			height: 25px;
+			line-height: 25px;
+			position: absolute;
+			top: -25px;
+			left: 0;
+			background: lightgreen;
+		}
+		.fixed {
+			position: fixed;
+			/*remember: left right top bottom always relative to the DOCUMENT*/
+			right: 0;
+			bottom: 0;
+		}
+		.fixed:before {
+			content: "bottom: 0; right: 0";
+			display: block;
+			box-sizing: border-box;
+			padding: 2px;
+			height: 25px;
+			line-height: 25px;
+			position: absolute;
+			top: -25px;
+			left: 0;
+			background: lightgreen;
+		}
+		.sticky {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="static">static: every element has a static position by default, so the element will stick to the normal page flow. So if there is a left/right/top/bottom/z-index set then there will be <b>NO EFFECT</b> on that element.</div>
+	<div class="relative">relative: an element’s <b>ORIGINAL POSITION REMAINS IN THE FLOW</b> of the document, just like the static value. But now left/right/top/bottom/z-index will work. The positional properties “nudge” the element from the original position in that direction.</div>
+	<div class="absolute">absolute: the element is <b>REMOVED FROM THE FLOW</b> of the document and other elements will behave as if it’s not even there whilst all the other positional properties will work on it.</div>
+	<div class="fixed">fixed: the element is REMOVED FROM THE FLOW of the document like absolutely positioned elements. In fact they behave almost the same, only fixed positioned elements are always relative to the DOCUMENT, not any particular parent, and are unaffected by scrolling.</div>
+	<div class="sticky">sticky (experimental): the element is treated like a RELATIVE value until the SCROLL LOCATION of the viewport REACHES A SPECIFIED THRESHOLD, at which point the element takes a FIXED position where it is told to stick.</div>
+	<div>FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL FILL</div>
+</body>
+</html>
