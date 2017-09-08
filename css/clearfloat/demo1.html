@@ -3,11 +3,12 @@
 <head>
 	<title>demo1</title>
 	<style type="text/css">
-		/*清除浮动: 父级元素定义高度*/
-		.container {
+		/*清除浮动: clear:both*/
+		.container1,
+		.container2 {
 			width: 500px;
-			height: 100px;
 			background: lightgreen;
+			margin: 5px;
 		}
 		.item {
 			width: 100px;
@@ -15,11 +16,26 @@
 			background: #765;
 			float: left;
 		}
+		.container1 .last {
+			clear: both;
+		}
+
+		.container2:after {
+			content: "123";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			height: 0;
+		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="item">Content</div>
+	<div class="container1">
+		<div class="item">Content1</div>
+		<div class="last"></div>
+	</div>
+	<div class="container2">
+		<div class="item">Content2</div>
 	</div>
 </body>
 </html>

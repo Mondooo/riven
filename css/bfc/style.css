@@ -1,0 +1,82 @@
+/*
+* A BLOCK FORMATTING CONTEXT is an HTML box that satisfies at least one of the following conditions:
+* The value of FLOAT is not none
+* The value of POSITION is neither static nor relative
+* The value of DISPLAY is table-cell, table-caption, inline-block, flex, or inline-flex
+* The value of OVERFLOW is not visible.
+*/
+
+/*
+* Whenever we are creating a new block formatting context, we choose the best condition based on our requirements
+*/
+.container1 {
+	border: 1px solid #000;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.item1 {
+	height: 50px;
+	width: 300px;
+	background: lightgreen;
+}
+.item2 {
+	height: 40px;
+	width: 500px;
+	background: orange;
+}
+.item3 {
+	height: 60px;
+	width: 200px;
+	background: lightyellow;
+}
+.item4 {
+	height: 20px;
+	width: 50px;
+	background: lightblue;
+	float: left;
+}
+.item5 {
+	height: 80px;
+	width: 300px;
+	background: lightgrey;
+}
+
+.container2 {
+	border: 1px solid #000;
+	background: red;
+	overflow: hidden;
+}
+.container2 p {
+	background: lightgreen;
+	margin: 10px 0;
+}
+.newBFC {
+	overflow: hidden;
+}
+
+.container3 {
+	background: lightblue;
+	overflow: hidden;
+}
+.container3 .item {
+	height: 100px;
+	width: 100px;
+	background: #85b;
+	float: left;
+	margin: 5px;
+}
+
+.container4 {
+	height: 100px;
+	width: 300px;
+	background: #779;
+}
+.container4 .floated {
+	float: left;
+	width: 80px;
+	height: 30px;
+	background: rgba(255,255,255,.5);
+}
+.container4 p {
+	overflow: hidden;
+}

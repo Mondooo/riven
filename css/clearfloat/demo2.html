@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>demo1</title>
+	<title>demo2</title>
 	<style type="text/css">
-		/*清除浮动: 结尾处加空div标签并clear:both*/
+		/*清除浮动: 构建BFC清除浮动*/
 		.container {
 			width: 500px;
 			background: lightgreen;
+			overflow: hidden; /*只要能将container变为BFC都可以*/
 		}
 		.item {
 			width: 100px;
@@ -14,15 +15,11 @@
 			background: #765;
 			float: left;
 		}
-		.last {
-			clear: both;
-		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="item">Content</div>
-		<div class="last"></div>
 	</div>
 </body>
 </html>

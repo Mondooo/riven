@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BFC</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h3>Alignment of Boxes in a Block Formatting Context</h3>
+	<div class="container1">
+		<div class="item1">each box’s left outer edge touches the left edge of the containing block</div>
+		<div class="item2">each box’s left outer edge touches the left edge of the containing block</div>
+		<div class="item3">each box’s left outer edge touches the left edge of the containing block</div>
+		<div class="item4"></div>
+		<div class="item5">each box’s left outer edge touches the left edge of the containing block</div>
+	</div>
+	<h3>Using a Block Formatting Context to Prevent Margin Collapse</h3>
+	<div class="container2">
+		<p>A Block Formatting Context Causes Collapsing Margins</p>
+        <p>A Block Formatting Context Causes Collapsing Margins</p>
+        <div class="newBFC">
+        	<p>By creating a new block formatting context we can prevent margin collapse</p>
+        </div>
+	</div>
+	<h3>Using a Block Formatting Context to Contain Floats</h3>
+	<div class="container3">
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+	<h3>Using Block Formatting Contexts to Prevent Text Wrapping</h3>
+	<div class="container4">
+		<div class="floated">
+			Floated div
+		</div>
+		<p>
+	    	Quae hic ut ab perferendis sit quod architecto, dolor debitis quam rem provident aspernatur tempora expedita.
+		</p>
+	</div>
+	<h3>After all, what the fuck does BFC actually stand for?</h3>
+	Maybe just a context with some rulls.
+</body>
+</html>
