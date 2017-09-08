@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float</title>
+	<style type="text/css">
+		/*
+        * Floated elements remain a part of the flow of the web page. 
+        * This is distinctly different than page elements that use absolute positioning.
+        * 
+        * 1. An element that is floated is automatically DISPLAY: BLOCK
+        * 2. Float element can be wrapped around by TEXT
+        * 3. An element that has the CLEAR property will move itself down past the float
+		*/
+		.container {
+			border: 1px dashed #333;
+			margin: 10px;
+			padding: 5px;
+		}
+		.item1 {
+			height: 100px;
+			width: 200px;
+			background: lightblue;
+			float: left;
+		}
+		.item2 {
+			height: 200px;
+			width: 300px;
+			background: orange;
+			clear: both;
+		}
+		.item3 {
+			height: 250px;
+			width: 150px;
+			background: #98d;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item1"></div>
+		<div class="item2"></div>
+		<div class="item3"></div>
+	</div>
+	<h3>For text wrapping around images, maybe float.</h3>
+	<h3>But for layout? Definitely not float. We got a lot better choices.</h3>
+</body>
+</html>
