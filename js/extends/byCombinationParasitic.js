@@ -21,7 +21,7 @@ function SubType(name, age) {
 }
 
 function inheritPrototype(subType, superType) {
-	const prototype = superType.prototype;
+	const prototype = Object.create(superType.prototype);
 	prototype.constructor = subType;
 	subType.prototype = prototype;
 }
@@ -56,22 +56,24 @@ console.log(Object.prototype.isPrototypeOf(instance1)); // true
 age: 29
 color: (3) ["red", "blue", "green"]
 name: "Nicholas"
-__proto__: Object
+__proto__: SuperType
 	constructor: ƒ SubType(name, age)
 	sayAge: ƒ ()
-	sayName: ƒ ()
 	__proto__: Object
-		constructor: ƒ Object()
-		hasOwnProperty: ƒ hasOwnProperty()
-		isPrototypeOf: ƒ isPrototypeOf()
-		propertyIsEnumerable: ƒ propertyIsEnumerable()
-		toLocaleString: ƒ toLocaleString()
-		toString: ƒ toString()
-		valueOf: ƒ valueOf()
-		__defineGetter__: ƒ __defineGetter__()
-		__defineSetter__: ƒ __defineSetter__()
-		__lookupGetter__: ƒ __lookupGetter__()
-		__lookupSetter__: ƒ __lookupSetter__()
-		get __proto__: ƒ __proto__()
-		set __proto__: ƒ __proto__()
+		constructor: ƒ SuperType(name, age)
+		sayName: ƒ ()
+		__proto__: Object
+			constructor: ƒ Object()
+			hasOwnProperty: ƒ hasOwnProperty()
+			isPrototypeOf: ƒ isPrototypeOf()
+			propertyIsEnumerable: ƒ propertyIsEnumerable()
+			toLocaleString: ƒ toLocaleString()
+			toString: ƒ toString()
+			valueOf: ƒ valueOf()
+			__defineGetter__: ƒ __defineGetter__()
+			__defineSetter__: ƒ __defineSetter__()
+			__lookupGetter__: ƒ __lookupGetter__()
+			__lookupSetter__: ƒ __lookupSetter__()
+			get __proto__: ƒ __proto__()
+			set __proto__: ƒ __proto__()
 */
