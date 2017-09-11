@@ -10,3 +10,4 @@ Every topic learned will be recorded here.
 | Vertical center |                                                           |
 | BFC             | [https://www.sitepoint.com/understanding-block-formatting-contexts-in-css/] |
 | Position        | [https://css-tricks.com/almanac/properties/p/position/]   |
+| Extends in JS   |                                                           |
