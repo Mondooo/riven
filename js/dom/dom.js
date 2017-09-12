@@ -55,71 +55,36 @@ removeBtns.forEach(function(btn) {
 function whatIsElement() {
 	const element = document.querySelector("div.content");
 	/* ↓↓↓↓
-	accessKey: ""
-	align: ""
-	assignedSlot: null
-	attributes: NamedNodeMap {0: class, length: 1}
-	baseURI: "file:///C:/Users/guoqiche/Github/riven/js/dom/test.html"
-	childElementCount: 3
+	... omit some attributes ...
+	... omit event bind ...
+        id: ""
+	ownerDocument: document
+	childElementCount: 3   notice: this kind need to be IE9 or higher
 	childNodes: (7) [text, div.section.first, text, div.section, text, div.section.last, text]
 	children: (3) [div.section.first, div.section, div.section.last]
-	classList: ["content", value: "content"]
-	className: "content"
-	clientHeight: 0
-	clientLeft: 0
-	clientTop: 0
-	clientWidth: 1314
-	contentEditable: "inherit"
-	dataset: DOMStringMap {}
-	dir: ""
-	draggable: false
 	firstChild: text
 	firstElementChild: div.section.first
-	hidden: false
-	id: ""
-	innerHTML: "↵		<div class="section first"></div>↵		<div class="section"></div>↵		<div class="section last"></div>↵	"
-	innerText: ""
-	isConnected: true
-	isContentEditable: false
-	lang: ""
 	lastChild: text
 	lastElementChild: div.section.last
-	localName: "div"
-	namespaceURI: "http://www.w3.org/1999/xhtml"
+	previousElementSibling: header#header
+	previousSibling: text
 	nextElementSibling: footer
 	nextSibling: text
+	parentElement: body
+	parentNode: body
+	style: CSSStyleDeclaration {alignContent: "", alignItems: "", alignSelf: "", alignmentBaseline: "", all: "", …}
+	classList: ["content", value: "content"]
+	className: "content"
+	innerHTML: "↵		<div class="section first"></div>↵		<div class="section"></div>↵		<div class="section last"></div>↵	"
+	innerText: ""
+	outerHTML: "<div class="content">↵		<div class="section first"></div>↵		<div class="section"></div>↵		<div class="section last"></div>↵	</div>"
+	outerText: ""
+	textContent: "↵		↵		↵		↵	"
+	tagName: "DIV"
+	localName: "div"
 	nodeName: "DIV"
 	nodeType: 1
 	nodeValue: null
-	nonce: ""
-	offsetHeight: 0
-	offsetLeft: 8
-	offsetParent: body
-	offsetTop: 26
-	offsetWidth: 1314
-	onabort: null
-	... event bind ...
-	outerHTML: "<div class="content">↵		<div class="section first"></div>↵		<div class="section"></div>↵		<div class="section last"></div>↵	</div>"
-	outerText: ""
-	ownerDocument: document
-	parentElement: body
-	parentNode: body
-	prefix: null
-	previousElementSibling: header#header
-	previousSibling: text
-	scrollHeight: 0
-	scrollLeft: 0
-	scrollTop: 0
-	scrollWidth: 1314
-	shadowRoot: null
-	slot: ""
-	spellcheck: true
-	style: CSSStyleDeclaration {alignContent: "", alignItems: "", alignSelf: "", alignmentBaseline: "", all: "", …}
-	tabIndex: -1
-	tagName: "DIV"
-	textContent: "↵		↵		↵		↵	"
-	title: ""
-	translate: true
 	__proto__: HTMLDivElement
 	*/
 }
