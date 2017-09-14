@@ -26,7 +26,55 @@ element.oncanplaythrough = function() {
 element.onchange = function() {
 	console.log("onchange");
 }
-element.onclick = function() {
+element.onclick = function(e) {
+	// what is in e?
+	// 鼠标键盘属性
+	// altKey: false // alt键
+	// ctrlKey: false // ctrl键
+	// metaKey: false // meta键
+	// shiftKey: false // shift键
+	// button: 0 // 哪个鼠标按钮被点击
+	// buttons: 0
+	// which: 1
+	// movementX: 0
+	// movementY: 0
+	// clientX: 107 // 鼠标指针的水平坐标 相对浏览器窗口
+	// clientY: 51 // 鼠标指针的垂直坐标
+	// screenX: 240 // 鼠标指针的水平坐标 相对整个屏幕
+	// screenY: 235
+	// pageX: 107 // 鼠标指针的水平坐标 clientX + 滚动条长度
+	// pageY: 51
+	// offsetX: 97 // 鼠标指针的水平坐标 事件源元素内部位置
+	// offsetY: 41
+	// x: 107
+	// y: 51
+	// layerX: 107
+	// layerY: 51
+	// relatedTarget: null // 对于 mouseover 事件来说，该属性是鼠标指针移到目标节点上时所离开的那个节点
+	//                     // 对于 mouseout 事件来说，该属性是离开目标时，鼠标指针进入的节点
+    
+
+	// 标准event属性
+	// bubbles: true
+	// cancelBubble: false
+	// cancelable: true
+	// composed: true
+	// currentTarget: div.div
+	// target: div.div
+	// defaultPrevented: false
+	// eventPhase: 2
+	// timeStamp: 5755.845000000001
+	// type: "click"
+	// srcElement: div.div
+	// toElement: div.div
+	// fromElement: null
+	// isTrusted: true
+	// returnValue: true
+	// detail: 1
+	// path: (5) [div.div, body, html, document, Window]
+	// sourceCapabilities: InputDeviceCapabilities {firesTouchEvents: false}
+	// view: Window {frames: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+	// __proto__: MouseEvent
 	console.log("onclick");
 }
 element.onclose = function() {
