@@ -14,3 +14,4 @@ Every topic learned will be recorded here.
 | Data binding    | [http://www.lucaongaro.eu/blog/2012/12/02/easy-two-way-data-binding-in-javascript/] |
 | DOM             | [https://plainjs.com/javascript/selecting/]               |
 | Ajax            | [http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html] |
+| Event           | [https://developer.mozilla.org/en-US/docs/Web/API/Event]  |
