@@ -15,4 +15,5 @@ Every topic learned will be recorded here.
 | DOM             | [https://plainjs.com/javascript/selecting/]               |
 | Ajax            | [http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html] |
 | Event           | [https://developer.mozilla.org/en-US/docs/Web/API/Event]  |
-| Array           | [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array] |
+| Array           | [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array]  |
+| String          | [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String] |
