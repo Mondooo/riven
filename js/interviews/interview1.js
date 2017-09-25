@@ -127,4 +127,7 @@
 //    console.log(binaryFind([1,2,3,4,5,6], 7)); // -1
 
 // 9. 提取一个 url 所使用的协议类型如 http ftp host params等
+//    let url = "https://mail.tongji.edu.cn/coremail/XT3/index.jsp?sid=DAsnlgLLymLZQgqlXiLLLhqvwocxRHhb#/md=folder&_suid=369";
+//    let reg = /^(\w+):\/\/([\w.]+?)\/.*?\?(\w+?=[^&]+)(?:&(\w+?=[^&]+))*/;
+//    console.log(url.match(reg));
 // 10. 概念: MVC XSS CSRF hash碰撞 前端优化 跨域方法

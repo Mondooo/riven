@@ -17,3 +17,4 @@ Every topic learned will be recorded here.
 | Event           | [https://developer.mozilla.org/en-US/docs/Web/API/Event]  |
 | Array           | [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array]  |
 | String          | [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String] |
+| RegExp          | [https://javascript.info/regexp-character-classes]        |
